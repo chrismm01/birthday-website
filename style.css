@@ -1,0 +1,329 @@
+@font-face{
+  src: url(fonts/KGChasingCars.ttf);
+  font-family: birth;
+  src: url(fonts/Barbie1.ttf);
+  font-family: barb1;
+  src: url(fonts/Barbie2.ttf);
+  font-family: barb2;
+
+  box-sizing: border-box;
+}
+
+body{
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
+  overflow: hidden;
+}
+
+i{
+  position: absolute;
+  background: #fff;
+  pointer-events: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+
+@keyframes animate {
+  0%{
+    opacity: 1;
+    transform: translate(-50%,-50%);
+  }
+  100%{
+    opacity: 0;
+    transform: translate(var(--randomX),var(--randomY));
+  }
+
+  
+}
+
+#video-container{
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+video{
+  min-height: 100%;
+  max-height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  
+}
+
+h1{
+  color: rgb(240, 223, 229);
+  font-family: barb2;
+  font-size: 100px;
+  user-select: none;
+  text-align: center;
+  text-shadow:
+    0px 1px 0px rgb(222, 53, 156),
+    0px 2px 0px rgb(222, 53, 156),
+    0px 3px 0px rgb(222, 53, 156),
+    0px 4px 0px rgb(222, 53, 156),
+    0px 5px 0px rgb(222, 53, 156),
+    0px 6px 0px rgb(222, 53, 156),
+    0px 7px 0px rgb(222, 53, 156),
+    0px 8px 0px rgb(222, 53, 156),
+    0px 9px 0px rgb(222, 53, 156),
+    0px 10px 0px rgb(222, 53, 156),
+    0px 11px 0px rgb(222, 53, 156),
+    0px 12px 0px rgb(222, 53, 156),
+    0px 13px 0px rgb(222, 53, 156),
+    0px 14px 0px rgb(222, 53, 156),
+    0px 15px 0px rgb(222, 53, 156),
+    0px 16px 0px rgb(222, 53, 156),
+    0px 17px 0px rgb(222, 53, 156),
+    0px 18px 0px rgb(222, 53, 156),
+    0px 19px 0px rgb(222, 53, 156),
+    0px 20px 10px rgb(222, 53, 156),
+
+    0px 20px 10px rgb(86, 102, 148);
+}
+
+body {
+  margin: 0;
+}
+
+#balloon-container {
+  max-height: 100%;
+  padding: 1em;
+  box-sizing: cover;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: show;
+  transition: opacity 500ms;
+}
+
+.balloon {
+  height: 125px;
+  width: 105px;
+  border-radius: 75% 75% 70% 70%;
+  position: relative;
+}
+
+.balloon:before {
+  content: "";
+  height: 75px;
+  width: 1px;
+  padding: 1px;
+  background-color: #FDFD96;
+  display: block;
+  position: absolute;
+  top: 125px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.balloon:after {
+    content: "▲";
+    text-align: center;
+    display: block;
+    position: absolute;
+    color: inherit;
+    top: 120px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+@keyframes float {
+  from {transform: translateY(100vh);
+  opacity: 1;}
+  to {transform: translateY(-300vh);
+  opacity: 0;}
+}
+
+p{
+  color: rgb(240, 223, 229);
+  font-family: barb2;
+  font-size: 50px;
+  text-shadow:
+    0px 1px 0px rgb(222, 53, 156),
+    0px 2px 0px rgb(222, 53, 156),
+    0px 3px 0px rgb(222, 53, 156),
+    0px 4px 0px rgb(222, 53, 156),
+    0px 5px 0px rgb(222, 53, 156),
+    0px 6px 0px rgb(222, 53, 156),
+    0px 7px 0px rgb(222, 53, 156),
+    0px 8px 0px rgb(222, 53, 156),
+    0px 9px 0px rgb(222, 53, 156),
+    0px 10px 0px rgb(222, 53, 156),
+
+    0px 10px 10px rgb(86, 102, 148);
+
+    position: relative;
+    top: -1380px;
+    left: 15px;
+}
+
+
+.container {
+  position: relative;
+}
+
+.bdayCake {
+  position: relative;
+  left: 670px;
+  top: -800px;
+}
+
+.plate {
+  position: absolute;
+  width: 242px;
+  height:10px;
+  border-radius:10px;
+  background-color: rgb(240, 223, 229);
+}
+
+.plate:before {
+  content:"";
+  position: absolute;
+  width:195px;
+  height:90px;
+  background-color: #9c6644;
+  top:-90px;
+  left:25px;  
+}
+
+.plate:after {
+  content:"";
+  position: absolute;
+  width:195px;
+  left:25px;
+  height:10px;
+  background-color: #ffd166;
+  top:-60px;
+  box-shadow: 0px 25px #f4978e;
+}
+
+.cream {
+  position: absolute;
+  background-color: hotpink;
+  width:195px;
+  height:20px;
+  left:25px;
+  top:-110px;
+  border-radius:20px 20px 0 0;
+}
+
+.cream:before {
+  content:"";
+  position: absolute;
+  background-color: #f08080;
+  width:15px;
+  height:30px;
+  top:10px;
+  border-radius:20px;
+  box-shadow: 15px 5px #9c6644, 30px -5px #f08080, 45px 0px #9c6644, 60px 4px #f08080, 75px 3px #9c6644, 90px -5px #f08080, 105px 5px #9c6644, 120px -5px #f08080, 135px 0px #9c6644, 150px 4px #f08080, 165px 0px #9c6644, 180px 3px #f08080;
+}
+
+.cream:after {
+  position: absolute;
+  content:"";
+  background-color: rgba(0,0,0,0.1);
+  width: 97.5px;
+  height:110px;
+  left:98px;
+  border-radius: 0 20px 0 0;
+}
+
+.candle {
+  position: absolute;
+  width: 10px;
+  height:40px;
+  background: repeating-linear-gradient(#fae0e4,
+  #fae0e4 5px, #ff0a54 5px, #ff0a54 10px);
+  box-shadow: inset -5px 0px rgba(0,0,0,0.1);
+  top: -150px;
+  left:118px;
+}
+
+.candle:before {
+  content:"";
+  position: absolute;
+  background-color: #333;
+  width:2px;
+  height:10px;
+  top:-10px;
+  left:4px;
+}
+
+.candle:after {
+  content:"";
+  position: absolute;
+  width:20px;
+  height: 20px;
+  background-color:#fcca46;
+  border-radius: 80% 15% 55% 50% / 55% 15% 80% 50%;
+  box-shadow: inset -3px 3px #fe7f2d;
+  transform: rotate(-45deg);
+  top:-28px;
+  left:-5px;
+  opacity:0.9;
+  animation: scale .5s ease-out infinite;
+}
+
+@keyframes scale {
+  0% {transform: scaleY(1) rotate(-45deg); opacity:0.9;}
+  50% {transform: scaleY(0.9) rotate(-45deg); opacity:0.8;}
+  100% {transform: scaleY(1) rotate(-45deg); opacity: 0.9;}  
+}
+
+.flame {
+  position: absolute; 
+}
+
+.flame:before {
+  content:"";
+  position: absolute;
+  background-color: rgba(0,0,0,0.1);
+  height:10px;
+  width:118px;
+  border-radius:0 10px 10px 0;
+  top:0;
+  left:123px;
+}
+
+.one {
+  position: absolute;
+  color: rgb(222, 53, 156);
+  font-size:20px;
+  top:-160px;
+  left: 100px;
+  text-shadow: 33px -30px rgb(222, 53, 156);
+  animation: flash .5s ease infinite alternate;
+}
+
+.two {
+  position: absolute;
+  color: rgb(222, 53, 156);
+  font-size:15px;
+  top:-180px;
+  left: 100px;
+  text-shadow: 35px 30px rgb(222, 53, 156);
+  animation: flash .8s ease infinite alternate;
+}
+ 
+.three {
+  position: absolute;
+  color: rgb(222, 53, 156);
+  font-size:10px;
+  top:-195px;
+  left: 110px;
+  text-shadow: 30px 30px rgb(222, 53, 156);
+  animation: flash .4s ease infinite alternate;
+}
+
+@keyframes flash {
+  from { opacity: 1; }  
+  to { opacity: 0; }
+}

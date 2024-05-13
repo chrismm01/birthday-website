@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="XA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial">
+    <link rel="icon" type="image/png" href="favicon/cake.png">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+  <body>
+    <audio controls>
+      <source src="bdaysong.mp3">
+      </audio>
+
+      <script>
+        let body = document.querySelector('body');
+        let h1 = document.querySelector('h2');
+        body.addEventListener('click', function(event){
+          for(let i = 0; i < 50; i++){
+            let spark = document.createElement('i');
+            spark.style.top = (event.clientY - body.offsetTop) +
+            'px';
+            spark.style.left = (event.clientX - body.offsetLeft) +
+            'px';
+            let randomX = (Math.random() - 0.5) * window.
+            innerWidth / 1.5;
+            let randomY = (Math.random() - 0.5) * window.
+            innerHeight / 1.5;
+            spark.style.setProperty('--randomX', randomX + 'px');
+            spark.style.setProperty('--randomY', randomY + 'px');
+
+            let randomSize = Math.random() * 30 + 2;
+            spark.style.width = randomSize+'px';
+            spark.style.height = randomSize+'px';
+            let duration = Math.random() * 2 + 0.5;
+            spark.style.animation = `animate ${duration}s ease-out forwards`;
+
+            //change color
+            let colors = ['#f4034c','#fff', '#ffeb3b', '#03a9f4'];
+            let randomColor =  colors[Math.floor(Math.random() * colors.length)];
+            spark.style.background = randomColor;
+
+            body.appendChild(spark);
+
+            setTimeout(function(){
+              spark.remove();
+            }, 2000)
+          }
+        })
+        </script>
+
+        <div id="video-container">
+          <video preload="auto" autoplay="autoplay" type="video/mp4" src="video/firework.mp4" loop></video>>
+          <div class="contents">
+          </div>
+
+          <h1 align="center">Happy Birthday <br>Christina</h1>
+
+          <div id="balloon-container">
+          </div>
+
+          <script>
+            const balloonContainer = document.getElementById("balloon-container");
+
+            function random(num) {
+              return Math.floor(Math.random() * num);
+            }
+
+            function getRandomStyles() {
+              var r = random(280);
+              var g = random(280);
+              var b = random(280);
+              var mt = random(200);
+              var ml = random(50);
+              var dur = random(5) + 5;
+              return `
+              background-color: rgba(${r},${g},${b},0.7);
+              color: rgba(${r},${g},${b},0.7); 
+              box-shadow: inset -100px -100px 130px rgba(${r - 20},${g - 20},${b - 20},0.7);
+              margin: ${mt}px 0 0 ${ml}px;
+              animation: float ${dur}s ease-in infinite
+              `;
+            }
+
+            function createBalloons(num) {
+              for (var i = num; i > 0; i--) {
+                var balloon = document.createElement("div");
+                balloon.className = "balloon";
+                balloon.style.cssText = getRandomStyles();
+                balloonContainer.append(balloon);
+              }
+            }
+
+            function removeBalloons() {
+              balloonContainer.style.opacity = 0;
+              setTimeout(() => {
+                balloonContainer.remove()
+              }, 500)
+            }
+
+            window.addEventListener("load", () => {
+              createBalloons(30)
+            });
+
+            
+
+            </script>
+
+            <p>
+              Hit Play
+              </p>
+            
+              <div class="container">
+                <div class="bdayCake">
+                  <div class="plate"></div>
+                  <div class="cream"></div>
+                  <div class="candle"></div>
+                  <div class="flame">
+                    <div class="one">+</div>
+                    <div class="two">+</div>
+                    <div class="three">+</div>
+                  </div>
+                </div>
+              </div>
+              
+    </body>
+
+</html>
